@@ -1,4 +1,0 @@
-openai
-emoji
-PyQt5
-termcolor
