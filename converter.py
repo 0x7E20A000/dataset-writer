@@ -23,9 +23,9 @@ class TextNormalizer:
             text = emoji.replace_emoji(text, '')
         
         if self.config.normalize_punctuation:
-            text = re.sub(r'[.]{2,}', '...', text)
-            text = re.sub(r'[!?]{2,}', r'\1', text)
-            text = re.sub(r'\s*([.,!?])\s*', r'\1 ', text)
+            text = re.sub(r'[.]{2,}', '...', text)  # 여러 개의 마침표를 ...으로
+            text = re.sub(r'([!?])\1+', r'\1', text)  # 반복되는 ! 또는 ?를 하나로
+            text = re.sub(r'\s*([.,!?])\s*', r'\1 ', text)  # 문장부호 주변 공백 정규화
             
         if self.config.normalize_whitespace:
             text = ' '.join(text.split())

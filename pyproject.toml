@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "pitgpt"
+version = "0.1.0"
+description = ""
+authors = ["0x7E20A000 <0x7E20@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.10"
+openai = "^1.54.3"
+python-dotenv = "^1.0.1"
+emoji = "^2.14.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.10.0"
+isort = "^5.13.2"
+pytest = "^8.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
